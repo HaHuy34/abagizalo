@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cosmetics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="product-section">
+  <h2 class="section-title">Danh Mục Sản Phẩm</h2>
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="./images/image1.webp" alt="Obagi Retinols" onclick="openLightbox(['./images/image11.webp', './images/image12.webp', './images/image13.webp'])">
+      <div class="product-info">
+        <p class="price">1.900.000₫</p>
+        <h3 class="name">Kem Dưỡng Ẩm Giảm Kích Ứng & Làm Dịu Da Obagi Clinical Kinetin+ Hydrating</h3>
+        <button class="buy-btn" onclick="openForm()">MUA NGAY</button>
+      </div>
+    </div>
+
+     <!-- Product 3 (Sale) -->
+    <div class="product-card sale">
+      
+      <img src="./images/image3.webp" alt="Moisturizer" onclick="openLightbox(['./images/image3.webp', './images/image31.webp'])">
+      <div class="product-info">
+        <p class="price">950.000₫ <span class="old-price">1.200.000₫</span></p>
+        <h3 class="name">Obagi Retinol 1.0 28g</h3>
+        <button class="buy-btn" onclick="openForm()">MUA NGAY</button>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="./images/image2.webp" alt="Toner BHA" onclick="openLightbox(['./images/image21.webp', './images/image22.webp', './images/image23.webp'])">
+      <div class="product-info">
+        <p class="price">1.250.000₫</p>
+        <h3 class="name">Obagi Retinol 0.5 28g</h3>
+        <button class="buy-btn" onclick="openForm()">MUA NGAY</button>
+      </div>
+    </div>
+
+    <!-- Product 3 (Sale) -->
+    <div class="product-card sale">
+      
+      <img src="./images/image5.webp" alt="Moisturizer" onclick="openLightbox(['./images/image51.webp', './images/image52.webp', './images/image53.webp'])">
+      <div class="product-info">
+        <p class="price">1.450.000₫ <span class="old-price">1.750.000₫</span></p>
+        <h3 class="name">Toner chứa 2% BHA Obagi</h3>
+        <button class="buy-btn" onclick="openForm()">MUA NGAY</button>
+      </div>
+    </div>
+
+    <!-- Product 4 (Sale) -->
+    <div class="product-card sale">
+      <img src="./images/image4.webp" alt="Corrective Serum" onclick="openLightbox(['./images/image41.webp', './images/image42.webp', './images/image43.webp'])">
+      <div class="product-info">
+        <p class="price">1.650.000₫ <span class="old-price">1.950.000₫</span></p>
+        <h3 class="name">Serum Vitamin B3 Obagi Daily Hydro-Drops Cấp Ẩm & Làm Dịu Da</h3>
+        <button class="buy-btn" onclick="openForm()">MUA NGAY</button>
+      </div>
+    </div>
+
+    <div class="product-card sale">
+      <!-- <img src="./images/image4.webp" alt="Corrective Serum""> -->
+      <!-- <div class="product-info"> -->
+        <!-- <p class="price">1.650.000₫ <span class="old-price">1.950.000₫</span></p> -->
+        <!-- <h3 class="name">Serum Vitamin B3 Obagi Daily Hydro-Drops Cấp Ẩm & Làm Dịu Da</h3> -->
+        <!-- <button class="buy-btn" onclick="openForm()">MUA NGAY</button> -->
+      </div>
+    </div>
+  </div>
+  <!-- Lightbox full màn hình -->
+  <div class="lightbox" id="lightbox">
+  <div class="lightbox-content"> 
+    <button class="close-btn" onclick="closeLightbox()">✕&nbsp;&nbsp;&nbsp;Close</button>
+    <div class="arrow left" onclick="changeSlide(-1)">←</div>
+
+    <div class="image-wrapper">
+      <img id="lightboxImage" src="" alt="">
+    </div>
+
+    <div class="arrow right" onclick="changeSlide(1)">→</div>
+    <div class="caption">
+      <h3 id="slideTitle">Tiêu đề</h3>
+      <small id="slideCount">1/4</small>
+    </div>
+  </div>
+</div>
+
+<!-- Overlay form -->
+<div id="orderForm" class="order-form hidden">
+  <div class="form-content">
+     <span onclick="closeForm()" class="closes-btn">✕&nbsp;&nbsp;&nbsp;Close</span>
+    <h3>Thông tin đặt hàng</h3>
+    <input type="text" id="name" placeholder="Họ và tên">
+    <input type="tel" id="phone" placeholder="Số điện thoại">
+    <input type="text" id="address" placeholder="Địa chỉ">
+    <div class="product-options">
+      <label><input type="checkbox" name="product" value="Kem Dưỡng Ẩm Giảm Kích Ứng & Làm Dịu Da Obagi Clinical Kinetin+ Hydrating"> Kem Dưỡng Ẩm Giảm Kích Ứng & Làm Dịu Da Obagi Clinical Kinetin+ Hydrating</label>
+      <label><input type="checkbox" name="product" value="Obagi Retinol 0.5 28g"> Obagi Retinol 0.5 28g</label>
+      <label><input type="checkbox" name="product" value=" Obagi Retinol 1.0 28g"> Obagi Retinol 1.0 28g</label>
+      <label><input type="checkbox" name="product" value="Serum Vitamin B3 Obagi Daily Hydro-Drops Cấp Ẩm & Làm Dịu Da"> Serum Vitamin B3 Obagi Daily Hydro-Drops Cấp Ẩm & Làm Dịu Da</label>
+      <label><input type="checkbox" name="product" value="Toner chứa 2% BHA Obagi"> Toner chứa 2% BHA Obagi</label>
+    </div>
+    <textarea id="note" placeholder="Ghi chú"></textarea>
+    <button onclick="submitOrder()" class="btn-shop">Mua Ngay</button>
+    <!-- <button onclick="closeForm()" class="cancel btn-shop">Hủy</button> -->
+  </div>
+</div>
+
+
+</section>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
