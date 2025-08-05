@@ -51,8 +51,15 @@ function openForm() {
   const address = document.getElementById('address').value.trim();
   const note = document.getElementById('note').value.trim();
 
-  if (!name || !phone) {
-    alert("Vui lòng nhập tên và số điện thoại!");
+ if (!name || !phone) {
+    Toastify({
+      text: "📌 Vui lòng nhập thông tin !",
+      duration: 2000,
+      gravity: "top", // top or bottom
+      position: "right", // left, center or right
+      backgroundColor: "#fa1201ff", // red
+      stopOnFocus: true
+    }).showToast();
     return;
   }
 
@@ -74,7 +81,44 @@ function openForm() {
     })
   });
 
-  alert("Đã gửi đơn hàng!");
+ Toastify({
+    text: " Đã gửi đơn hàng!",
+    duration: 2000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: "#4CAF50", // green
+    stopOnFocus: true
+  }).showToast();
   closeForm();
 }
 
+
+// Text animation
+const text = "Ship Mọi Nơi - Nhận Trong Ngày";
+  const element = document.getElementById("typewriter-text");
+  let index = 0;
+  let typing = true;
+
+  function typeLoop() {
+    if (typing) {
+      if (index <= text.length) {
+        element.textContent = text.substring(0, index);
+        index++;
+        setTimeout(typeLoop, 100);
+      } else {
+        typing = false;
+        setTimeout(typeLoop, 1000); // chờ trước khi xóa
+      }
+    } else {
+      if (index >= 0) {
+        element.textContent = text.substring(0, index);
+        index--;
+        setTimeout(typeLoop, 50);
+      } else {
+        typing = true;
+        setTimeout(typeLoop, 500); // chờ trước khi gõ lại
+      }
+    }
+  }
+
+  typeLoop();
