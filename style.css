@@ -529,3 +529,9 @@ footer {
   width: 70px;
   border-radius: 50px;
 }
+
+.in4-check {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
