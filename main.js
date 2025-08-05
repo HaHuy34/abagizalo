@@ -122,3 +122,16 @@ const text = "Ship Mọi Nơi - Nhận Trong Ngày";
   }
 
   typeLoop();
+
+
+  // Zalo phone 
+  window.addEventListener('scroll', function () {
+    const zalo = document.querySelector('.zalo-phone');
+    if (window.scrollY > 100) {
+      zalo.classList.add('show');
+      zalo.classList.remove('hidden');
+    } else {
+      zalo.classList.remove('show');
+      zalo.classList.add('hidden');
+    }
+  });

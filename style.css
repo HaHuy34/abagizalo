@@ -469,3 +469,63 @@ ul li {
     /* luôn 2 cột */
   }
 }
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  background-color: #212121;
+  padding: 30px 10px 0 10px;
+  height: 300px;
+  /* text-align: center; */
+  color: white;
+}
+.obagi-footer {
+  font-size: 29px;
+}
+
+.in4{
+  margin: 10px 0;
+  text-align: start;
+
+}
+
+.in4 p {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+
+.in4 a {
+  color: #f26522;
+  text-decoration: none;
+}
+
+
+.zalo-phone {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  width: 60px;
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  z-index: 999;
+}
+
+.zalo-phone.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+.zalo-phone img{
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  width: 70px;
+  border-radius: 50px;
+}
