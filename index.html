@@ -7,7 +7,8 @@
   <link rel="shortcut icon" href="./images/image1.webp" type="image/x-icon">
   <title>Cosmetics</title>
   <!-- Toastify CSS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,23 +18,25 @@
       <h2 class="typewriter" id="typewriter-text"></h2>
     </div>
     <div class="phone-boss">
-    <ul style="display: flex; justify-content: space-between; align-items: center; list-style: none; padding: 10px 1rem;">
-      <li class="ring-animate"><a href="tel:0972526462"><img style="width: 50px;" src="./images/phone-call.png" alt=""></a></li>
-      <li style="text-align: center;"><button class="buy-btn" onclick="openForm()">ĐẶT NGAY</button></li>
-    </ul>
-  </div>
+      <ul
+        style="display: flex; justify-content: space-between; align-items: center; list-style: none; padding: 10px 1rem;">
+        <li class="ring-animate"><a href="tel:0972526462"><img style="width: 50px;" src="./images/phone-call.png"
+              alt=""></a></li>
+        <li style="text-align: center;"><button class="buy-btn" onclick="openForm()">ĐẶT NGAY</button></li>
+      </ul>
+    </div>
   </header>
   <div class="banner" style="padding: 1rem;">
     <img src="./images/banner.webp" alt="">
   </div>
-  
+
 
   <main style="padding: 1rem;">
     <section class="product-section">
-      <h2 class="section-title">Danh Mục Sản Phẩm</h2>
+      <h2 class="section-title" data-aos="fade-down">Danh Mục Sản Phẩm</h2>
       <div class="product-grid">
         <!-- Product 1 -->
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-up">
           <img src="./images/image1.webp" alt="Obagi Retinols"
             onclick="openLightbox(['./images/image11.webp', './images/image12.webp', './images/image13.webp'])">
           <div class="product-info">
@@ -44,7 +47,7 @@
         </div>
 
         <!-- Product 3 (Sale) -->
-        <div class="product-card sale">
+        <div class="product-card sale" data-aos="fade-up">
 
           <img src="./images/image3.webp" alt="Moisturizer"
             onclick="openLightbox(['./images/image3.webp', './images/image31.webp'])">
@@ -56,7 +59,7 @@
         </div>
 
         <!-- Product 2 -->
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-up">
           <img src="./images/image2.webp" alt="Toner BHA"
             onclick="openLightbox(['./images/image21.webp', './images/image22.webp', './images/image23.webp'])">
           <div class="product-info">
@@ -67,7 +70,7 @@
         </div>
 
         <!-- Product 3 (Sale) -->
-        <div class="product-card sale">
+        <div class="product-card sale" data-aos="fade-up">
 
           <img src="./images/image5.webp" alt="Moisturizer"
             onclick="openLightbox(['./images/image51.webp', './images/image52.webp', './images/image53.webp'])">
@@ -79,7 +82,7 @@
         </div>
 
         <!-- Product 4 (Sale) -->
-        <div class="product-card sale">
+        <div class="product-card sale" data-aos="fade-up">
           <img src="./images/image4.webp" alt="Corrective Serum"
             onclick="openLightbox(['./images/image41.webp', './images/image42.webp', './images/image43.webp'])">
           <div class="product-info">
@@ -89,7 +92,7 @@
           </div>
         </div>
 
-        <div class="product-card sale">
+        <div class="product-card sale" data-aos="fade-up">
           <!-- <img src="./images/image4.webp" alt="Corrective Serum""> -->
           <!-- <div class="product-info"> -->
           <!-- <p class="price">1.650.000₫ <span class="old-price">1.950.000₫</span></p> -->
@@ -148,18 +151,24 @@
       </a>
     </div>
   </main>
-  
+
 
   <footer>
     <h2 class="obagi-footer" style="text-align: center;">Obagi Chính Hãng - Bán lẻ</h2>
     <div class="in4">
-      <p> <strong style="display: flex; align-items: center; gap: 10px;"> <img style="width: 23px;" src="./images/location.png" alt="">Điểm phân phối: 186 Trần Cung  - Nghĩa Tân - Cầu Giấy - Hà Nội</strong></p>
-      <p> <strong style="display: flex; align-items: center; gap: 10px; margin: 10px 0;"> <img src="./images/phone.png" alt="">Điện thoại: <a href="tel:0972526462">0972 526 462</a></strong></p>
-      <p> <strong style="display: flex; align-items: center; gap: 10px;"> <img src="./images/web-link.png" alt="">Website : <a href="https://www.obagihanoi.store/" target="_blank">www.obagihanoi.store</a></strong></p>
-      <p> <strong style="display: flex; align-items: center; gap: 10px; margin: 10px 0;"><img src="./images/job-search.png" alt="">Tuyển cộng tác viên khu vực Hà Nội</strong></p>
+      <p> <strong style="display: flex; align-items: center; gap: 10px;"> <img style="width: 23px;"
+            src="./images/location.png" alt="">Điểm phân phối: 186 Trần Cung - Nghĩa Tân - Cầu Giấy - Hà Nội</strong>
+      </p>
+      <p> <strong style="display: flex; align-items: center; gap: 10px; margin: 10px 0;"> <img src="./images/phone.png"
+            alt="">Điện thoại: <a href="tel:0972526462">0972 526 462</a></strong></p>
+      <p> <strong style="display: flex; align-items: center; gap: 10px;"> <img src="./images/web-link.png"
+            alt="">Website : <a href="https://www.obagihanoi.store/" target="_blank">www.obagihanoi.store</a></strong>
+      </p>
+      <p> <strong style="display: flex; align-items: center; gap: 10px; margin: 10px 0;"><img
+            src="./images/job-search.png" alt="">Tuyển cộng tác viên khu vực Hà Nội</strong></p>
     </div>
   </footer>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="./main.js"></script>
 </body>

@@ -385,8 +385,8 @@ ul li {
 
 .toastify {
   max-width: 70% !important;
-    z-index: 999999999999999999999999999999999999 !important;
-  }
+  z-index: 999999999999999999999999999999999999 !important;
+}
 
 .order-form.hidden {
   display: none;
@@ -479,11 +479,12 @@ footer {
   /* text-align: center; */
   color: white;
 }
+
 .obagi-footer {
   font-size: 29px;
 }
 
-.in4{
+.in4 {
   margin: 10px 0;
   text-align: start;
 
@@ -522,7 +523,7 @@ footer {
   display: none;
 }
 
-.zalo-phone img{
+.zalo-phone img {
   position: fixed;
   bottom: 60px;
   right: 20px;
